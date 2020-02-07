@@ -40,23 +40,21 @@ struct PointCloud
 		T  x,y,z;
 
 		PtData(T xx, T yy, T zz) { x = xx; y = yy; z = zz;}
-		PtData &operator =(const PtData &info)
-		{
-			this->x    = info.x;
-			this->y    = info.y;
-			this->z    = info.z;
-			return *this;
-		}
+                PtData &operator=(const PtData &info) {
+                    this->x = info.x;
+                    this->y = info.y;
+                    this->z = info.z;
+                    return *this;
+                }
 	};
 
 	std::vector<PtData>  pts;
 
 	// operator =
-	PointCloud &operator =(const PointCloud &info)
-	{
-		this->pts    = info.pts;
-		return *this;
-	}
+        PointCloud &operator=(const PointCloud &info) {
+            this->pts = info.pts;
+            return *this;
+        }
 
 	// Must return the number of data points
 	inline size_t kdtree_get_point_count() const { return pts.size(); }

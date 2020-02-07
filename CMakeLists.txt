@@ -5,6 +5,9 @@ PROJECT(LineFromPointCloud)
 # CMake settings
 CMAKE_MINIMUM_REQUIRED(VERSION 2.8.3)
 
+## Should Compile as C++14
+add_compile_options(-std=c++14)
+
 # OpenMP
 FIND_PACKAGE(OpenMP)
 IF(OPENMP_FOUND)

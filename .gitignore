@@ -1,0 +1,10 @@
+build/
+
+# catin-build generated files
+.catkin_tools/
+devel/
+logs/
+
+# Clion-generated files
+.idea/
+cmake-build-debug/
